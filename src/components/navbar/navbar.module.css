@@ -1,0 +1,47 @@
+
+.navbar {
+    background-color: var(--bg);
+}
+
+.wrapper {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo a {
+    color: #26262a;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+.links li a:hover {
+    color: black;
+    transition: color 0.3s;
+}
+
+.logout {
+    font-size: 18px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-top: 3px;
+    color: #cacaca;
+}
+
+.logout:hover {
+    color: red;
+    transition: all 0.2s;
+}
+
+

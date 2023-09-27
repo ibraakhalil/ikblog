@@ -1,0 +1,54 @@
+
+
+.footer {
+    background: var(--bg);
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+.social_links ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social_links ul li {
+    margin: 0 0.5rem;
+}
+.social_links ul li a {
+    width: 32px;
+    height: 32px;
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 16px;
+    color: var(--bg);
+}
+
+.nav_links {
+    margin-top: 2rem;
+
+}
+.nav_links ul {
+    display: flex;
+    justify-content: center;
+
+}
+.nav_links ul li {
+    margin: 0 1rem;
+    position: relative;
+    font-size: 14px;
+}
+.nav_links ul li::after {
+	content: '';
+	width: 1px;
+	height: 15px;
+	background: var(--links);
+	position: absolute;
+	right: -15px;
+	top: 6px;
+}
+.nav_links ul li:last-child::after {
+	display: none;
+}

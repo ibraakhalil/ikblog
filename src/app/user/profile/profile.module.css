@@ -1,0 +1,74 @@
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg);
+    border-radius: 15px;
+    margin-top: 3rem;
+    padding: 2rem 2rem;
+    flex: 3;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+
+/* hero Left section  */
+
+.name {
+    text-transform: uppercase;
+}
+
+/* hero Right section  */
+
+.profile_pic {
+    width: 260px;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.profile_pic img {
+    height: 100%;
+}
+
+.follow_buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.follow_buttons p {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+.social_links ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social_links ul li {
+    margin: 0 0.3rem;
+}
+.social_links ul li a {
+    width: 22px;
+    height: 22px;
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-size: 12px;
+    color: var(--bg);
+}

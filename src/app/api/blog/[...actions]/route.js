@@ -21,8 +21,8 @@ export const GET = async (req, { params }) => {
                     { 'new': true }
                 )
                 return NextResponse.json({
-                    likes: updatedBlog.likes.length,
-                    dislikes: updatedBlog.dislikes.length,
+                    likes: updatedBlog.likes,
+                    dislikes: updatedBlog.dislikes,
                 }, { status: 200 })
             }
 
@@ -33,8 +33,8 @@ export const GET = async (req, { params }) => {
             )
 
             return NextResponse.json({
-                likes: updatedBlog.likes.length,
-                dislikes: updatedBlog.dislikes.length,
+                likes: updatedBlog.likes,
+                dislikes: updatedBlog.dislikes,
             }, { status: 200 })
         }
 
@@ -50,8 +50,8 @@ export const GET = async (req, { params }) => {
                     { 'new': true }
                 )
                 return NextResponse.json({
-                    likes: updatedBlog.likes.length,
-                    dislikes: updatedBlog.dislikes.length,
+                    likes: updatedBlog.likes,
+                    dislikes: updatedBlog.dislikes,
                 }, { status: 200 })
             }
 
@@ -62,8 +62,8 @@ export const GET = async (req, { params }) => {
             )
 
             return NextResponse.json({
-                likes: updatedBlog.likes.length,
-                dislikes: updatedBlog.dislikes.length,
+                likes: updatedBlog.likes,
+                dislikes: updatedBlog.dislikes,
             }, { status: 200 })
         }
 

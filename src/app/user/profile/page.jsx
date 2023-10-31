@@ -8,6 +8,8 @@ import Blogs from "@/components/blogs/Blogs";
 const userPic = 'https://www.leadmeonline.com/wp-content/uploads/2018/04/user-placeholder-man-10-6.jpg'
 
 
+
+
 const page = async () => {
     const { user } = await getServerSession(authOptions)
 
@@ -18,7 +20,7 @@ const page = async () => {
                     <div className={styles.sidebar}>
                         <ul>
                             <li>
-                                <Link href={`/user/create_blog`}>Creat Blog</Link>
+                                <Link href={`/user/create_blog`}>Create Blog</Link>
                             </li>
                             <li>
                                 <Link href={`/`}>Edit Profile</Link>
@@ -72,7 +74,7 @@ const page = async () => {
                         </div>
                     </div>
                 </div>
-                <Blogs/>
+                <Blogs />
             </div>}
 
         </div>

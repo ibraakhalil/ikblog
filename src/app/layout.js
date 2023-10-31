@@ -11,7 +11,7 @@ const poppins = Poppins({
   subsets: ['latin']
 })
 
-export const metadata = {
+export const metadata = { 
   title: 'IK Blog',
   description: 'Blog site which created by Ibrahim Khalil',
 }

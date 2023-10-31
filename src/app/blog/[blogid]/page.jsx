@@ -1,7 +1,7 @@
 'use client'
 import axios from "axios";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation"
+import { useParams } from "next/navigation"
 import style from './page.module.css'
 import { useEffect, useState } from "react";
 import defautlUser from '../../../../public/user/default.jpg'

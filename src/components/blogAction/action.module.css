@@ -20,4 +20,16 @@
     cursor: pointer;
     margin: 0 4px;
     background: var(--pure);
+    user-select: none;
+}
+.actions ul li span {
+	user-select: none;
+	font-size: 22px;
+	padding: 7px;
+}
+.liked {
+    color: black;
+}
+.noliked {
+    color: #b8b8b8;
 }

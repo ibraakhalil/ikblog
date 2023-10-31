@@ -3,8 +3,6 @@
     display: flex;
     justify-content: space-between;
     background-color: var(--bg);
-    border-radius: 15px;
-    margin-top: 3rem;
     padding: 2rem 2rem;
     flex: 3;
 }
@@ -12,10 +10,27 @@
 .wrapper {
     display: flex;
     justify-content: space-between;
+    margin-top: 3rem;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .sidebar {
     flex: 1;
+    background: var(--primary);
+}
+.sidebar ul li {
+    padding: 10px 1rem;
+    margin: 10px 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.sidebar ul li:hover {
+    background: var(--links);
+    transition: all 0.3s;
+}
+.sidebar ul li a {
+    color: var(--pure);
 }
 
 

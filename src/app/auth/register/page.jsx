@@ -12,6 +12,7 @@ const Register = () => {
     const name = useRef('')
     const email = useRef('')
     const password = useRef('')
+    const confirmpassword = useRef('')
     const router = useRouter()
 
 
@@ -49,21 +50,28 @@ const Register = () => {
                 </div>
                 <div className={style.form_group}>
                     <label htmlFor="name">Name:</label>
-                    <input ref={name} type="text" name="name" />
+                    <input ref={name} type="text" name="name" placeholder='Type your Name...' />
                     <div className={style.error_feedback}>
                         {error?.name && <span>{error.name}</span>}
                     </div>
                 </div>
                 <div className={style.form_group}>
                     <label htmlFor="email">Email:</label>
-                    <input ref={email} type="email" name="email" />
+                    <input ref={email} type="email" name="email" placeholder='Type your email...'/>
                     <div className={style.error_feedback}>
                         {error?.email && <span>{error.email}</span>}
                     </div>
                 </div>
                 <div className={style.form_group}>
                     <label htmlFor="password">Password:</label>
-                    <input ref={password} type="password" name="password" />
+                    <input ref={password} type="password" name="password" placeholder='Type your password...'/>
+                    <div className={style.error_feedback}>
+                        {error?.password && <span>{error.password}</span>}
+                    </div>
+                </div>
+                <div className={style.form_group}>
+                    <label htmlFor="confirmpassword">Confirm Password:</label>
+                    <input ref={confirmpassword} type="password" name="confirmpassword" placeholder='Type your Confirm password...'/>
                     <div className={style.error_feedback}>
                         {error?.password && <span>{error.password}</span>}
                     </div>

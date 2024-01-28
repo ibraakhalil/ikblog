@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ props, children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={poppins.className}>
         <SessionProvider>
           <BlogProvider>

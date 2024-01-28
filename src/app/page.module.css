@@ -1,5 +1,4 @@
 
-
 .home {
     height: calc(100vh - 100px);
     display: flex;
@@ -30,4 +29,11 @@
     -webkit-text-stroke: 3px;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: var(--primary);
+}
+
+@media only screen and (max-width: 600px) {
+    .hero_text {
+        font-size: 5rem;
+        margin-left: 0rem;
+    }
 }

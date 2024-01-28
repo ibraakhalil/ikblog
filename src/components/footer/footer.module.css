@@ -52,3 +52,8 @@
 .nav_links ul li:last-child::after {
 	display: none;
 }
+
+
+@media only screen and (max-width: 600px) {
+  
+}

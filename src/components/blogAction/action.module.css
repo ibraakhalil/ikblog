@@ -33,3 +33,8 @@
 .noliked {
     color: #b8b8b8;
 }
+
+
+@media only screen and (max-width: 600px) {
+  
+}

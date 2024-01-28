@@ -15,15 +15,14 @@ const Comment = ({ blogId, showCommentInput }) => {
     useEffect(() => {
         axios.get(`/api/blog/comment/${blogId}`)
             .then(res => {
-                console.log(res.data)
                 setComments(res.data.reverse())
             })
             .catch(err => {
-                console.log(err.message)
+                console.log(err)
             })
     }, [blogId])
 
-    const postComment = (e) => {
+    const postComment = (e) => {    
         let commentBody = commentRef.current.value;
         axios.post(`/api/blog/comment/${blogId}`, { body: commentBody })
             .then(res => {

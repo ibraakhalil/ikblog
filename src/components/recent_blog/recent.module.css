@@ -17,6 +17,7 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 7px 7px 12px #5c545416;
+    flex-wrap: wrap;
 }
 
 .blog {
@@ -64,4 +65,15 @@
 
 .read_more {
     margin-top: 1rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .blog {
+        padding: 1rem;
+    }
+    .thumbnail {
+        height: 250px;
+        min-width: 100%;
+    }
 }

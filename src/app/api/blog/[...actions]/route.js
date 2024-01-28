@@ -5,8 +5,9 @@ import Blog from "@/models/blog";
 import Comment from "@/models/comment";
 
 export const GET = async (req, { params }) => {
-    const { user } = await getServerSession(authOptions)
+    const session = await getServerSession(authOptions)
     const [action, blogId, ...other] = params.actions
+    const user = session?.user
     try {
 
         ///////// Like Controller//////////
@@ -14,10 +15,10 @@ export const GET = async (req, { params }) => {
         if (action === 'like') {
             const blog = await Blog.findOne({ _id: blogId })
 
-            if (blog.likes.includes(user.id)) {
+            if (blog.likes.includes(user?.id)) {
                 const updatedBlog = await Blog.findOneAndUpdate(
                     { _id: blogId },
-                    { "$pull": { "likes": user.id } },
+                    { "$pull": { "likes": user?.id } },
                     { 'new': true }
                 )
                 return NextResponse.json({
@@ -28,7 +29,7 @@ export const GET = async (req, { params }) => {
 
             const updatedBlog = await Blog.findOneAndUpdate(
                 { _id: blogId },
-                { "$push": { "likes": user.id } },
+                { "$push": { "likes": user?.id } },
                 { 'new': true }
             )
 
@@ -43,10 +44,10 @@ export const GET = async (req, { params }) => {
         if (action === 'dislike') {
             const blog = await Blog.findOne({ _id: blogId })
 
-            if (blog.dislikes.includes(user.id)) {
+            if (blog.dislikes.includes(user?.id)) {
                 const updatedBlog = await Blog.findOneAndUpdate(
                     { _id: blogId },
-                    { "$pull": { "dislikes": user.id } },
+                    { "$pull": { "dislikes": user?.id } },
                     { 'new': true }
                 )
                 return NextResponse.json({
@@ -57,7 +58,7 @@ export const GET = async (req, { params }) => {
 
             const updatedBlog = await Blog.findOneAndUpdate(
                 { _id: blogId },
-                { "$push": { "dislikes": user.id } },
+                { "$push": { "dislikes": user?.id } },
                 { 'new': true }
             )
 
@@ -68,6 +69,7 @@ export const GET = async (req, { params }) => {
         }
 
         if (action === 'comment') {
+
             const comments = await Comment.find({ blog: blogId })
                 .populate({
                     path: 'author',

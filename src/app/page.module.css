@@ -33,7 +33,7 @@
 
 @media only screen and (max-width: 600px) {
     .hero_text {
-        font-size: 5rem;
+        font-size: 22vw;
         margin-left: 0rem;
     }
 }

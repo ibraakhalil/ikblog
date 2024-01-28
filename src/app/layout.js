@@ -1,5 +1,5 @@
 import './globals.css'
-import { Inter, Poppins } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import Navbar from '@/components/navbar/Navbar'
 import Footer from '@/components/footer/Footer'
 import SessionProvider from '../providers/sessionProvider'
@@ -17,7 +17,7 @@ export const metadata = {
 }
 
 
-export default function RootLayout({ props, children }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body className={poppins.className}>

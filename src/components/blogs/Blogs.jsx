@@ -15,9 +15,7 @@ const Blogs = () => {
     const { data, status } = useSession()
     const user = data?.user
     const blogs = useContext(BlogContext)
-    let myBlogs = blogs.filter((blog) => {
-        return blog.author._id === user?.id
-    })
+    let myBlogs = blogs.filter((blog) => blog.author._id === user?.id)
 
     const handleDelete = (e) => {
         const blogid = e.target.dataset.blogid
@@ -26,7 +24,7 @@ const Blogs = () => {
             .then(res => {
                 myBlogs.pull()
             })
-    }    
+    }
     const handleEdit = (e) => {
         const blogid = e.target.dataset.blogid
         axios.post(`/api/blog/edit/${blogid}`)
@@ -58,23 +56,22 @@ const Blogs = () => {
                         <div className={styles.actions}>
                             <ul>
                                 <li>
-                                    <button 
-                                    data-blogid={blog._id} 
-                                    onClick={handleDelete}
-                                    className={styles.btn}
+                                    <button
+                                        data-blogid={blog._id}
+                                        onClick={handleDelete}
+                                        className={styles.btn}
                                     >
                                         <MdDelete />
                                     </button>
                                 </li>
                                 <li>
-                                <button 
-                                    data-blogid={blog._id} 
-                                    onClick={handleEdit}
-                                    className={styles.btn}
+                                    <button
+                                        data-blogid={blog._id}
+                                        onClick={handleEdit}
+                                        className={styles.btn}
                                     >
                                         <BiSolidEdit />
                                     </button>
-                                    
                                 </li>
                             </ul>
                         </div>

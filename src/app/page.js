@@ -3,7 +3,7 @@ import Recent_blog from '@/components/recent_blog/Recent_blog'
 
 export default function Home() {
   return (
-    <div className="container">
+    <>
       <div className={styles.home}>
         <div className={styles.wrapper}>
           <p>A Personal <span>Blog</span></p>
@@ -11,6 +11,7 @@ export default function Home() {
         </div>
       </div>
       <Recent_blog />
-    </div>
+    </>
+
   )
 }

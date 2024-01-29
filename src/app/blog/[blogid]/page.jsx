@@ -34,7 +34,7 @@ function Blogsingle() {
                         <h2>{blog.title}</h2>
                         <div className={style.author}>
                             <div className={style.avatar}>
-                                <Image src={defautlUser} alt="Avatar" width={120} height={120} />
+                                <Image src={defautlUser} alt="Avatar" width={120} height={120} sizes="40"/>
                             </div>
                             <div className="author_info">
                                 <h4>Ibrahim Khalil</h4>

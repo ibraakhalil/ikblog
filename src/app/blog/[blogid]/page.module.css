@@ -10,16 +10,13 @@
 
 .blog_info {
 	display: flex;
-	gap: 3rem;
-	margin-bottom: 3rem;
-	background: var(--pure);
+	gap: 2rem;
+	margin-bottom: 2rem;
 	padding: 1rem;
 	border-radius: 12px;
 }
 
 .info {
-	flex: 2 1;
-	order: 1;
 	justify-content: center;
 	display: flex;
 	flex-direction: column;
@@ -29,8 +26,6 @@
 }
 
 .thumbnail {
-	order: 2;
-	flex: 1.5 1;
 	border-radius: 17px;
 	overflow: hidden;
 	width: 500px;
@@ -67,4 +62,17 @@
 	background: var(--bg);
 	padding: 1rem;
 	border-radius: 7px;
+}
+
+@media only screen and (max-width: 600px) {
+	.wrapper {
+		padding: 0;
+	}
+	.info {
+		padding: 0 1rem;
+	}
+	.blog_info {
+		padding: 0;
+		flex-wrap: wrap;
+	}
 }

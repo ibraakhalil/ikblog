@@ -100,7 +100,6 @@ export const POST = async (req, { params }) => {
         })
 
         const savedComment = await newComment.save()
-
         return NextResponse.json(savedComment, { status: 200 })
 
     } catch (err) {

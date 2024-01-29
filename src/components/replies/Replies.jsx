@@ -9,7 +9,6 @@ const Replies = ({ replies, commentId }) => {
     const session = useSession()
     const replyRef = useRef()
 
-
     const handleReply = (e) => {
         axios.post(`/api/blog/replies/${commentId}`, {
             body: replyRef.current.value,
@@ -19,14 +18,14 @@ const Replies = ({ replies, commentId }) => {
                 console.log(res.data)
             })
             .catch(err => {
-                console.log(err.message)
+                console.log('From post reply' + err.message)
             })
     }
 
 
     return (
         <>
-            <div style={{"display": 'none'}} className={styles.replies}>
+            <div style={{ "display": 'none' }} className={styles.replies}>
                 <div className={styles.reply_input}>
                     <input type="text" ref={replyRef} name="reply" placeholder="Write your reply" />
                     <span onClick={handleReply}>💦</span>

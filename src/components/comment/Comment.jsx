@@ -11,18 +11,18 @@ const Comment = ({ blogId, showCommentInput }) => {
     const [comments, setComments] = useState([])
     const [showReply, setShowReply] = useState(false)
     const commentRef = useRef()
-    
+
     useEffect(() => {
         axios.get(`/api/blog/comment/${blogId}`)
             .then(res => {
                 setComments(res.data.reverse())
             })
             .catch(err => {
-                console.log(err)
+                console.log('from get comments' + err.message)
             })
     }, [blogId])
 
-    const postComment = (e) => {    
+    const postComment = (e) => {
         let commentBody = commentRef.current.value;
         axios.post(`/api/blog/comment/${blogId}`, { body: commentBody })
             .then(res => {
@@ -31,7 +31,7 @@ const Comment = ({ blogId, showCommentInput }) => {
                 e.target.previousSibling.value = ''
             })
             .catch(err => {
-                console.log(err.message)
+                console.log('From post comment' + err.message)
             })
     }
 
@@ -39,13 +39,14 @@ const Comment = ({ blogId, showCommentInput }) => {
         const commentid = e.target.dataset.commentid
         axios.delete(`/api/blog/delete/comment/${commentid}`)
             .then(res => {
-                e.target.parentElement.parentElement.parentElement.remove()
+                e.target.parentElement?.parentElement?.parentElement?.remove()
             })
+            .catch(e => console.log('From post comment' + e.message))
     }
 
     const handleShowReply = (e) => {
-        let replies = e.target.parentElement.parentElement.nextSibling
-        if(replies.style.display === 'none') {
+        let replies = e.target.parentElement?.parentElement?.nextSibling
+        if (replies.style.display === 'none') {
             replies.style.display = 'block'
         } else {
             replies.style.display = 'none'

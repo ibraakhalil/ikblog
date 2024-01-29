@@ -25,7 +25,7 @@ const Actions = ({ blog, blogId }) => {
                 setActions(res.data)
             })
             .catch(err => {
-                console.log(err.message)
+                console.log('From get like' + err.message)
             })
     }
     const onDislike = (e) => {
@@ -34,7 +34,7 @@ const Actions = ({ blog, blogId }) => {
                 setActions(res.data)
             })
             .catch(err => {
-                console.log(err.message)
+                console.log('From get dislike' + err.message)
             })
     }
     const onShare = (e) => {

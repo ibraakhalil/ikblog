@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from './page.module.css'
 import Recent_blog from '@/components/recent_blog/Recent_blog'
 

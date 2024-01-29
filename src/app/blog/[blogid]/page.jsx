@@ -28,7 +28,7 @@ function Blogsingle() {
             {!loading && <div className={style.wrapper}>
                 <div className={style.blog_info}>
                     <div className={style.thumbnail}>
-                        <Image src={defautlThumbnail} fill={true} alt="Thumbnail" />
+                        <Image src={defautlThumbnail} sizes="300" fill={true} priority alt="Thumbnail" />
                     </div>
                     <div className={style.info}>
                         <h2>{blog.title}</h2>
